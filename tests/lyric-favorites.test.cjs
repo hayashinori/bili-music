@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { PlayerModel } = require('../model.cjs');
+const { PlayerModel } = require('../src/model.cjs');
 const wait = ms => new Promise(r => setTimeout(r, ms));
 const media = { key: '/video/starred/?p=2', title: '测试歌曲', url: 'https://www.bilibili.com/video/starred/?p=2', time: 5, duration: 100, paused: true };
 test('星标候选会切换并保存原文、翻译与后续偏移，重启可离线调用', async () => {

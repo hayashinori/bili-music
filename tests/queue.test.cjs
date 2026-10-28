@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { SongQueue, videoURL } = require('../song-queue.cjs');
-const { PlayerModel } = require('../model.cjs');
+const { SongQueue, videoURL } = require('../src/song-queue.cjs');
+const { PlayerModel } = require('../src/model.cjs');
 const ids = ['BV1xx411c7mD', 'BV2xx411c7mD', 'BV3xx411c7mD'];
 function fixture() { const q = new SongQueue(); ids.forEach((id, i) => q.add({ url: id, title: '歌曲' + i })); return q; }
 test('歌曲列表标准化去重、保留分P、拒绝其他站点及非视频', () => {

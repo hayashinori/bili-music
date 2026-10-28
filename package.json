@@ -5,11 +5,11 @@
   "description": "B站音乐与双语桌面歌词",
   "author": "BanCi",
   "private": true,
-  "main": "main.cjs",
+  "main": "src/main.cjs",
   "scripts": {
     "start": "electron .",
     "test": "node --test tests/*.test.cjs",
-    "package": "electron-packager . BanCi --platform=win32 --arch=x64 --out=release-0.7.3 --overwrite --asar --icon=assets/app.ico --ignore=^/tests --ignore=^/test-profile --ignore=^/artifacts --ignore=^/release --ignore=^/.electron-cache --ignore=^/.npm-cache"
+    "package": "electron-packager . BanCi --platform=win32 --arch=x64 --out=release-0.7.3 --overwrite --asar --icon=src/assets/app.ico --ignore=^/tests --ignore=^/test-profile --ignore=^/artifacts --ignore=^/release --ignore=^/.electron-cache --ignore=^/.npm-cache"
   },
   "devDependencies": {
     "electron": "45.0.0",

@@ -20,12 +20,12 @@ python scripts/package-zip.py
 
 | 路径 | 用途 |
 | --- | --- |
-| `main.cjs` / `preload.cjs` | 原生窗口、B 站视图与受限 IPC |
-| `guest-preload.cjs` | 隔离世界中的媒体时间与状态读取 |
-| `model.cjs` | 歌词匹配、时间轴、偏移与本机持久化 |
-| `song-queue.cjs` | 列表去重、排序和循环决策 |
-| `shared/` | 歌词解析、来源适配与主题元数据 |
-| `renderer/` | 主界面、沉浸模式与桌面歌词 |
+| `src/main.cjs` / `src/preload.cjs` | 原生窗口、B 站视图与受限 IPC |
+| `src/guest-preload.cjs` | 隔离世界中的媒体时间与状态读取 |
+| `src/model.cjs` | 歌词匹配、时间轴、偏移与本机持久化 |
+| `src/song-queue.cjs` | 列表去重、排序和循环决策 |
+| `src/shared/` | 歌词解析、来源适配与主题元数据 |
+| `src/renderer/` | 主界面、沉浸模式与桌面歌词 |
 | `tests/` | 单元测试和 Electron 联动测试 |
 
 ## 原生窗口测试
@@ -56,4 +56,4 @@ node tests/performance-smoke.cjs
 
 GitHub Actions 在推送和 PR 时运行单元测试。版本文件更新到主分支或手动运行 Windows 发布工作流时，会构建 ZIP 并创建对应版本的 Release；已有版本不会自动覆盖。
 
-第三方站点接口变化可能导致真实网络失败，验证边界记录在根目录 `VALIDATION.md`。
+第三方站点接口变化可能导致真实网络失败，验证边界记录在`docs/VALIDATION.md`。

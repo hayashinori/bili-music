@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { PlayerModel } = require('../model.cjs');
+const { PlayerModel } = require('../src/model.cjs');
 test('快捷切源保留自定义搜索词，刷新真正清缓存，失败保留当前歌词及收藏', async () => {
   const calls = [], clears = []; let fail = false;
   const m = new PlayerModel({ clearCache: s => clears.push(s), search: async (query, source) => {

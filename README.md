@@ -88,16 +88,16 @@ npm test
 npm run package
 ```
 
-架构、原生窗口测试与发行包构建见 [开发说明](docs/DEVELOPMENT.md)；历史改动见 [更新记录](docs/HISTORY.md)；验证范围见 [测试记录](VALIDATION.md)。
+架构、原生窗口测试与发行包构建见 [开发说明](docs/DEVELOPMENT.md)；历史改动见 [更新记录](docs/HISTORY.md)；验证范围见 [测试记录](docs/VALIDATION.md)。
 
 ## 参与贡献
 
 欢迎提交问题和 PR。报告故障时请注明版本、Windows 版本、操作步骤和错误提示；涉及视频时可附公开视频链接。不要上传 Cookie、密码、二维码或整个用户数据目录。
 
-详见 [贡献指南](CONTRIBUTING.md) 和 [安全问题反馈](SECURITY.md)。
+详见 [贡献指南](.github/CONTRIBUTING.md) 和 [安全问题反馈](.github/SECURITY.md)。
 
 ## 许可证与致谢
 
 源码采用 [MIT License](LICENSE)。音乐、视频、歌词、封面和第三方依赖分别遵循各自权利与许可证；本项目与哔哩哔哩及各音乐平台没有官方关联，不提供音频下载或权限绕过。
 
-基于 [Electron](https://www.electronjs.org/) 构建。歌词接口结构参考 [Listen 1](https://github.com/listen1/listen1_chrome_extension) 与 [LyricsKit](https://github.com/ddddxxx/LyricsKit)，实现说明见 [第三方说明](THIRD_PARTY_NOTICES.md)。
+基于 [Electron](https://www.electronjs.org/) 构建。歌词接口结构参考 [Listen 1](https://github.com/listen1/listen1_chrome_extension) 与 [LyricsKit](https://github.com/ddddxxx/LyricsKit)，实现说明见 [第三方说明](docs/THIRD_PARTY_NOTICES.md)。

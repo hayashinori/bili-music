@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const P = require('../shared/providers');
+const P = require('../src/shared/providers');
 test('QQ/酷狗独立搜索与歌词读取，字段、翻译、Base64 和固定地址正确', async () => {
   const original = global.fetch, calls = [], hash = 'A'.repeat(32);
   P.setBridge(null);

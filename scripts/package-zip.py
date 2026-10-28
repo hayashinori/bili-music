@@ -51,7 +51,7 @@ Ctrl + Alt + L：找回歌词并打开主窗口
 请保留整个文件夹的其他文件。无需安装插件、Python或Node.js。
 '''
 (release / '使用说明.txt').write_text(instructions, encoding='utf-8-sig')
-(release / '验证记录.md').write_text((root / 'VALIDATION.md').read_text(encoding='utf-8'), encoding='utf-8')
+(release / '验证记录.md').write_text((root / 'docs' / 'VALIDATION.md').read_text(encoding='utf-8'), encoding='utf-8')
 output = root.parent / ('伴词桌面-' + version + '-Windows-x64.zip')
 with ZipFile(output, 'w', ZIP_DEFLATED, compresslevel=5) as archive:
     for file in release.rglob('*'):

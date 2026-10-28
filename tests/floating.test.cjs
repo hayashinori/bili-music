@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { homeBounds, clampBounds } = require('../floating-bounds.cjs');
+const { homeBounds, clampBounds } = require('../src/floating-bounds.cjs');
 test('浮窗归位留在主屏或负坐标副屏的工作区域内', () => {
   for (const area of [{ x: 0, y: 0, width: 1920, height: 1040 }, { x: -1920, y: 120, width: 1920, height: 1080 }, { x: 2560, y: -1440, width: 1280, height: 720 }]) {
     const b = homeBounds(area);

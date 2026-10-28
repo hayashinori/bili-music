@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { tokens } = require('../renderer/theme.js');
-const { PlayerModel } = require('../model.cjs');
+const { tokens } = require('../src/renderer/theme.js');
+const { PlayerModel } = require('../src/model.cjs');
 function luminance(hex) { const c = hex.slice(1).match(/../g).map(v => parseInt(v, 16) / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4); return c[0] * .2126 + c[1] * .7152 + c[2] * .0722; }
 test('任意主题填充的前景和浅色界面的主题文字保持可读，拒绝无效颜色', () => {
   for (const color of ['#f43f55', '#ffffff', '#000000', '#ffff00', '#168778', '#7962d8']) {

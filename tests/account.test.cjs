@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { BiliAccount, imageURL } = require('../account.cjs');
-const { PlayerModel } = require('../model.cjs');
+const { BiliAccount, imageURL } = require('../src/account.cjs');
+const { PlayerModel } = require('../src/model.cjs');
 test('账号资料和收藏夹使用当前会话，输出仅含显示所需字段', async () => {
   const requests = [];
   const account = new BiliAccount(async (url, options) => {

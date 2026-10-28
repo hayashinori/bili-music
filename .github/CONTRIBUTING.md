@@ -1,6 +1,6 @@
 # 贡献指南
 
-先阅读 README 和 [开发说明](docs/DEVELOPMENT.md)。
+先阅读 README 和 [开发说明](../docs/DEVELOPMENT.md)。
 
 ## 报告问题
 

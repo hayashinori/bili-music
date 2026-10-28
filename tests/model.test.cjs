@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { PlayerModel } = require('../model.cjs');
-const { allowedBilibili, resolveInput } = require('../navigation.cjs');
+const { PlayerModel } = require('../src/model.cjs');
+const { allowedBilibili, resolveInput } = require('../src/navigation.cjs');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const media = (key, title = '演示歌') => ({ key, title, url: 'https://www.bilibili.com' + key, time: 12, duration: 200, paused: false });
 test('只接受B站HTTPS地址和BV号，其他输入作为官方搜索', () => {

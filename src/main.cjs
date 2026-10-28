@@ -10,7 +10,7 @@ const { readAudioState, clickAudioOption } = require('./player-audio.cjs');
 const { videoURL } = require('./song-queue.cjs');
 const providers = require('./shared/providers');
 const testMode = process.argv.includes('--test-mode');
-if (testMode) app.setPath('userData', process.env.BANCI_TEST_PROFILE || path.join(__dirname, 'test-profile'));
+if (testMode) app.setPath('userData', process.env.BANCI_TEST_PROFILE || path.join(__dirname, '..', 'test-profile'));
 app.setName('伴词桌面');
 let main, floating, guest, model, saveTimer, storePath, quitting = false, mode = 'listen';
 let floatingReady = false, floatingBackgroundMode = true, floatingCrashCount = 0, floatingLocked = null;
