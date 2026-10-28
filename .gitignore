@@ -1,0 +1,25 @@
+node_modules/
+.npm-cache/
+.electron-cache/
+release*/
+artifacts/
+test-profile/
+test-profile*/
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+*.asar
+*.exe
+*.pfx
+*.key
+*.pem
+Cookies
+Cookies-journal
+Local State
+player.json
+.DS_Store
+Thumbs.db
+.codex/
+.agents/

@@ -1,0 +1,20 @@
+name: 故障反馈
+description: 播放、歌词或界面出现问题
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本与 Windows 版本
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤、预期与实际结果
+      description: 可附公开视频链接，不要上传 Cookie、密码、二维码或用户数据目录。
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: 错误提示或脱敏截图

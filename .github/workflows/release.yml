@@ -1,0 +1,40 @@
+name: Windows release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [package.json]
+permissions:
+  contents: write
+concurrency:
+  group: windows-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: npm ci
+      - run: npm test
+      - run: npm run package
+      - run: python scripts/package-zip.py
+      - name: Publish version if new
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = node -p "require('./package.json').version"
+          $tag = "v$version"
+          gh release view $tag --repo $env:GITHUB_REPOSITORY 2>$null
+          if ($LASTEXITCODE -eq 0) { Write-Host "Release already exists; leaving it unchanged."; exit 0 }
+          $asset = Get-ChildItem -LiteralPath .. -Filter "*-$version-Windows-x64.zip" | Select-Object -First 1
+          if (-not $asset) { throw "Windows ZIP missing" }
+          gh release create $tag $asset.FullName --repo $env:GITHUB_REPOSITORY --target $env:GITHUB_SHA --title "Bili音乐 $version" --notes-file docs/RELEASE.md
+          if ($LASTEXITCODE -ne 0) { throw "Release upload failed" }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs><linearGradient id="sky" x2=".4" y2="1"><stop stop-color="#18263b"/><stop offset="1" stop-color="#686485"/></linearGradient></defs>
+  <rect width="600" height="600" fill="url(#sky)"/><circle cx="420" cy="150" r="48" fill="#f4dfce"/>
+  <path d="M0 340 80 310 140 355 205 300 260 340 330 305 400 350 470 295 540 330 600 300V600H0Z" fill="#222c43"/>
+  <path d="M0 430Q180 350 300 430T600 425V600H0Z" fill="#152235"/>
+  <path d="M-30 560Q180 375 330 470T650 395" fill="none" stroke="#ef9c9a" stroke-width="5" opacity=".65"/>
+  <g fill="#eac5ad"><circle cx="100" cy="375" r="3"/><circle cx="218" cy="355" r="3"/><circle cx="340" cy="380" r="3"/><circle cx="480" cy="345" r="3"/></g>
+  <text x="60" y="135" fill="#eeeaf0" font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="52" font-weight="600">夜航</text><text x="64" y="175" fill="#bfc7d8" font-family="Segoe UI,sans-serif" font-size="14" letter-spacing="3">BILI MUSIC / DEMO</text>
+</svg>

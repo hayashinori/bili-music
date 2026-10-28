@@ -1,0 +1,27 @@
+{
+  "name": "banci-desktop",
+  "productName": "伴词桌面",
+  "version": "0.7.3",
+  "description": "B站音乐与双语桌面歌词",
+  "author": "BanCi",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "package": "electron-packager . BanCi --platform=win32 --arch=x64 --out=release-0.7.3 --overwrite --asar --icon=assets/app.ico --ignore=^/tests --ignore=^/test-profile --ignore=^/artifacts --ignore=^/release --ignore=^/.electron-cache --ignore=^/.npm-cache"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "@electron/packager": "20.3.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hayashinori/bili-music.git"
+  },
+  "homepage": "https://github.com/hayashinori/bili-music",
+  "bugs": {
+    "url": "https://github.com/hayashinori/bili-music/issues"
+  }
+}
